@@ -56,7 +56,11 @@
               sigunguCode: data.sigunguCode,
               address: data.address
             };
+
+            var jsonString = JSON.stringify(postData);
+            
             window.postMessageToiOS(postData);
+            window.Android.postMessageToAOS(jsonString);
           },
           width: "100%",
           height: "100%",
